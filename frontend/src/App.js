@@ -25,6 +25,7 @@ import OrderSuccess from "./components/Cart/OrderSuccess";
 import MyOrders from "./components/Order/MyOrders";
 import OrderDetails from "./components/Order/OrderDetails";
 import Dashboard from "./components/Admin/Dashboard";
+import UserDashboard from "./components/User/UserDashboard";
 import MainData from "./components/Admin/MainData";
 import OrderTable from "./components/Admin/OrderTable";
 import UpdateOrder from "./components/Admin/UpdateOrder";
@@ -302,9 +303,9 @@ function App() {
           path="/user/dashboard"
           element={
             <ProtectedRoute isAdmin={false}>
-              <Dashboard activeTab={0}>
+              <UserDashboard activeTab={0}>
                 <h1>Hello from User Dashboard!!</h1>
-              </Dashboard>
+              </UserDashboard>
             </ProtectedRoute>
           }
         ></Route>

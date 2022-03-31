@@ -37,21 +37,21 @@ const navMenu = [
         label: "Products",
         ref: "/admin/products",
     },
-    {
-        icon: <AddBoxIcon />,
-        label: "Add Product",
-        ref: "/admin/new_product",
-    },
+    // {
+    //     icon: <AddBoxIcon />,
+    //     label: "Add Product",
+    //     ref: "/admin/new_product",
+    // },
     {
         icon: <GroupIcon />,
         label: "Users",
         ref: "/admin/users",
     },
-    {
-        icon: <ReviewsIcon />,
-        label: "Reviews",
-        ref: "/admin/reviews",
-    },
+    // {
+    //     icon: <ReviewsIcon />,
+    //     label: "Reviews",
+    //     ref: "/admin/reviews",
+    // },
   
     {
         icon: <LogoutIcon />,

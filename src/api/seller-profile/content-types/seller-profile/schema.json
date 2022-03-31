@@ -1,0 +1,102 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seller_profiles",
+  "info": {
+    "singularName": "seller-profile",
+    "pluralName": "seller-profiles",
+    "displayName": "SellerProfile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sellerCompanyName": {
+      "type": "string",
+      "required": true
+    },
+    "companyRegistrationNumber": {
+      "type": "string",
+      "required": true
+    },
+    "vat": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "tax": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "postCode": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "poBox": {
+      "type": "string"
+    },
+    "streetNumber": {
+      "type": "string"
+    },
+    "buildingNumber": {
+      "type": "string"
+    },
+    "flatno": {
+      "type": "string"
+    },
+    "idOfCompanyRegistration": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "idOfTheOwner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "idOfVAT": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "check": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "approve",
+        "reject"
+      ],
+      "default": "pending",
+      "required": false
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "sellerProfile"
+    }
+  }
+}

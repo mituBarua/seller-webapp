@@ -73,6 +73,12 @@ module.exports = {
         "user"
       ],
       default: "user"
+    },
+    sellerProfile : {
+      type: "relation",
+      relation: "oneToOne",
+      target: "api::seller-profile.seller-profile",
+      inversedBy: "users_permissions_user"
     }
   },
 

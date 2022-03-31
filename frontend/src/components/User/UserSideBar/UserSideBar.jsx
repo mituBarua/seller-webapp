@@ -14,11 +14,18 @@ import './UserSideBar.css';
 import { useSnackbar } from 'notistack';
 import { logoutUser } from '../../../actions/userAction';
 
+//user dashboard navbar
+
 const navMenu = [
     {
         icon: <EqualizerIcon />,
         label: "User Dashboard",
         ref: "/user/dashboard",
+    },
+    {
+        icon: <AccountBoxIcon />,
+        label: "My Profile",
+        ref: "/account",
     },
     {
         icon: <ShoppingBagIcon />,
@@ -45,11 +52,7 @@ const navMenu = [
         label: "Reviews",
         ref: "/admin/reviews",
     },
-    {
-        icon: <AccountBoxIcon />,
-        label: "My Profile",
-        ref: "/account",
-    },
+  
     {
         icon: <LogoutIcon />,
         label: "Logout",
@@ -120,3 +123,5 @@ const UserSidebar = ({ activeTab, setToggleSidebar }) => {
 };
 
 export default UserSidebar;
+
+

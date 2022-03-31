@@ -70,6 +70,12 @@
         "user"
       ],
       "default": "user"
+    },
+    "sellerProfile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::seller-profile.seller-profile",
+      "inversedBy": "usersPermissionsUser"
     }
   }
 }
